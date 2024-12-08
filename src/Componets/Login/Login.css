@@ -16,8 +16,8 @@ body {
 
 form {
   background: white;
-  width: 500px; /* Largura do formulário */
-  padding: 40px; /* Espaço interno */
+  width: 500px;
+  padding: 40px;
   border-radius: 10px; /* Bordas arredondadas */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
   text-align: center;
@@ -99,7 +99,7 @@ button {
   padding: 15px 40px; /* Ajusta o padding para igualar a altura dos campos de entrada */
   border: 2px solid #ccc; /* Cor da borda igual aos campos de input */
   border-radius: 25px; /* Arredondamento dos cantos, igual aos campos de input */
-  background-color: #3a9428; /* Cor de fundo do botão */
+  background-color: #ff9900; /* Cor de fundo do botão */
   color: white; /* Cor do texto do botão */
   font-size: 16px; /* Tamanho da fonte */
   cursor: pointer; /* Aparece como um botão clicável */
@@ -107,8 +107,8 @@ button {
   box-sizing: border-box; /* Inclui o padding e a borda na largura total */
 }
 
-a.button:hover {
-  background-color: blue;
+button:hover {
+  background-color: #cc7a00;
 }
 
 .signup-link {
@@ -130,18 +130,16 @@ a.button:hover {
   text-decoration: underline;
 }
 
-a.esqueciSenha {
-  color: blue; /* Cor do texto */
-  text-decoration: underline; /* Adiciona o sublinhado */
-  text-decoration-color: blue; /* Cor azul para o sublinhado */
+.logo-image {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  width: 200px;
+  height: auto;
 }
 
-/* para id = # para class = . */
-
-.logo-image {
-  position: absolute; /* Permite posicionamento livre */
-  top: 50px; /* Ajuste conforme a distância desejada do topo */
-  right: 60px; /* Ajuste conforme a distância desejada da borda direita */
-  width: 200px; /* Opcional: ajuste o tamanho da imagem */
-  height: auto; /* Mantém a proporção da imagem */
+a.esqueciSenha {
+  color: blue;
+  text-decoration: underline;
+  text-decoration-color: blue;
 }
