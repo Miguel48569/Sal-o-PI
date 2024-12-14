@@ -55,11 +55,6 @@ form h1 {
   box-sizing: border-box; /* Inclui o padding na largura total */
 }
 
-/* Opcional: Efeito de foco */
-.input-field input:focus {
-  border-color: #4caf50; /* Muda a cor da borda ao focar no campo */
-}
-
 .input-field input:focus {
   border-color: #ff9900;
 }

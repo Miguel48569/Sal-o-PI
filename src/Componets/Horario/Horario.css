@@ -1,0 +1,60 @@
+.horario-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  height: 100vh; /* Ocupa toda a altura da tela */
+  width: 100%; /* Ocupa toda a largura */
+  box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.horario-conteudo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.horario-texto {
+  flex: 1;
+  padding: 20px;
+}
+
+.horario-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.horario-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #ff6f00; /* Cor laranja */
+}
+
+.horario-texto p {
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.horario-imagem {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

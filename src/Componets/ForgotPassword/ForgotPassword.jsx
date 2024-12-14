@@ -1,18 +1,25 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ForgotPassword.css";
 import { FaUser } from "react-icons/fa";
 import logo from "../../assets/logo-sec.png";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const handleEmailCharge = (e) => {
     setEmail(e.target.value);
   };
 
-  const handleSubimit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`O código de recuperação foi enviado para: ${email}`);
+    if (email) {
+      alert(`O código de recuperação foi enviado para: ${email}`);
+      navigate("/CodePassword");
+    } else {
+      alert("Por favor, preencha o campo de e-mail.");
+    }
   };
 
   return (
@@ -20,7 +27,7 @@ const ForgotPassword = () => {
       <div>
         <img src={logo} alt="logo do senac" className="logo-image" />
       </div>
-      <form onSubmit={handleSubimit}>
+      <form onSubmit={handleSubmit}>
         <label className="label-password">
           <span className="titulo-texto">Esqueceu a senha?</span>
           <br />

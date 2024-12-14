@@ -1,0 +1,55 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 80px;
+  height: 100vh; /* Ocupa toda a altura da tela */
+  width: 100%; /* Ocupa toda a largura */
+  box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.texto-sobre {
+  max-width: 50%;
+}
+
+.titulo-sobre {
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  border-bottom: 9px solid #ffa500;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.texto-sobre p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.imagens-sobre {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
+}
+
+.imagem-sobre {
+  width: 850px; /* Aumenta a largura da imagem */
+  height: auto; /* Mantém a proporção original */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

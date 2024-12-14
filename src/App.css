@@ -1,5 +1,7 @@
+/* Não aplique background aqui para a Home */
 .App {
   background: url("assets/m-salao.png") no-repeat;
   background-position: center left;
   background-size: auto 100%;
+  min-height: 100vh;
 }

@@ -2,16 +2,20 @@ import { useState } from "react";
 import logo from "../../assets/logo-sec.png";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
-import { Link } from "react-router-dom"; // Importando o Link para navegação
+import { Link, useNavigate } from "react-router-dom"; // Importando o useNavigate para navegação
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Inicializando o hook de navegação
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Dados de Login:", { username, password });
+    // Verificando se o email e senha estão preenchidos
+    if (username && password) {
+      navigate("/Home"); // Redirecionando para a página home
+    }
   };
 
   return (
@@ -25,9 +29,9 @@ const Login = () => {
           <input
             type="text"
             placeholder="E-mail"
-            required
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            required
           />
           <FaUser className="icon" />
         </div>
@@ -35,9 +39,9 @@ const Login = () => {
           <input
             type="password"
             placeholder="Senha"
-            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <FaLock className="icon" />
         </div>
@@ -52,13 +56,11 @@ const Login = () => {
           </Link>
         </div>
 
-        <button>Entrar</button>
+        <button type="submit">Entrar</button>
 
         <div className="signup-link">
           <p>
-            Não tem conta?{" "}
-            {/* Aqui o Link do React Router para redirecionar para a página de Cadastro */}
-            <Link to="/cadastro">Cadastre-se</Link>
+            Não tem conta? <Link to="/cadastro">Cadastre-se</Link>
           </p>
         </div>
       </form>
